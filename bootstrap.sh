@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get update
+sudo apt-get -y update
 
 sudo apt-get -y install curl
 sudo apt-get -y install zsh
@@ -17,6 +17,9 @@ chown -R vagrant: ~vagrant/.oh-my-zsh
 ### Create a new zsh configuration from the provided template
 cp /vagrant/.zshrc ~vagrant/.zshrc
 
+### Copy .gemrc
+cp /vagrant/.gemrc ~vagrant/.gemrc
+
 ### Customize zsh theme
 #sed -i -e 's/ZSH_THEME=".*"/ZSH_THEME="agnoster"/' ~vagrant/.zshrc
 
@@ -30,13 +33,11 @@ chown vagrant: ~vagrant/.zshrc
 chsh -s /bin/zsh vagrant
 
 ### Install java
-sudo apt-get -y install openjdk-7-jdk
+sudo add-apt-repository -y ppa:openjdk-r/ppa
+sudo apt-get -y update 
+sudo apt-get -y install openjdk-8-jdk
 
 ### Get FITS
-#wget http://projects.iq.harvard.edu/files/fits/files/fits-0.6.2.zip
+wget http://projects.iq.harvard.edu/files/fits/files/fits-0.6.2.zip
 
-
-echo "gem: --no-document" > ~/.gemrc
-
-# cleanup
 sudo apt-get clean

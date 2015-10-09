@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/fits:$PATH"
+
+
 
 # rbenv environment
 export RBENV_ROOT="${HOME}/.rbenv"
