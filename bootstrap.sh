@@ -5,7 +5,7 @@ sudo apt-get -y update
 sudo apt-get -y install curl
 sudo apt-get -y install zsh
 
-sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev clamav clamav-daemon libclamav-dev
+sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev clamav clamav-daemon libclamav-dev libmysqlclient-dev libsqlite3-dev
 
 ### Set Up ZSH
 if [ ! -d ~vagrant/.oh-my-zsh  ]; then
