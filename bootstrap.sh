@@ -23,8 +23,10 @@ cp /vagrant/.gemrc ~vagrant/.gemrc
 ### Customize zsh theme
 #sed -i -e 's/ZSH_THEME=".*"/ZSH_THEME="agnoster"/' ~vagrant/.zshrc
 
-### Change ownership of .zshrc
+### Change ownership of .zshrc & .gemrc
 chown vagrant: ~vagrant/.zshrc
+chown vagrant: ~vagrant/.gemrc
+
 
 ### Install Ruby from rbenv
 #rbenv install -v 2.2.2
@@ -38,6 +40,9 @@ sudo apt-get -y update
 sudo apt-get -y install openjdk-8-jdk
 
 ### Get FITS
-wget http://projects.iq.harvard.edu/files/fits/files/fits-0.6.2.zip
+curl http://projects.iq.harvard.edu/files/fits/files/fits-0.6.2.zip --output fits.zip --silent
+
+### Install Rails
+#/home/vagrant/.rbenv/shims/gem install rails
 
 sudo apt-get clean
